@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    background-color: #967e76;
+}
+nav{
+    height: 10vh;
+    font-size: 8rem;
+    font-family: cursive;
+    color: #080202;
+}
+.container{
+    height: 50vh;
+    width: 50vw;
+    background-color: #eee3cb;
+    gap: 25px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px #eccdb4;
+}
+.choice{
+    height: 50%;
+    padding: 10px;
+}
+.computer{
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    gap: 3vw;
+    height: 50%;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    height: 50%;
+}
+label{
+    font-size: 4em;
+    font-family: cursive;
+    color: #080202;
+}
+input{
+    width: 8vw;
+    height: 5vh;
+    border: 8px solid #080202;
+    font-size: 4rem;
+    padding: 50px;
+}
+.option{
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+    height: 50%;
+    padding-left: 3vw;
+}
+button{
+    height: 4vh;
+    width: 12vw;
+    font-size: 3.5rem;
+    font-family: cursive;
+    border-radius: 8px;
+    background-color: #408e91;
+    color: antiquewhite;
+    cursor: pointer;
+    border: 8px solid #080202;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: antiquewhite;
+    transform: scale(1.12);
+    color: black;
+}
+.draw{
+    font-size: 4rem;
+    font-family: cursive;
+    visibility: hidden;
+}
+.result_win{
+    display: flex;
+    visibility: hidden;
+    font-size: 6rem;
+    align-items: center;
+    font-family: cursive;
+    animation: result_win 0.5s infinite alternate ;
+}
+@keyframes result_win {
+    0%{
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1.2);
+        color: rgb(3, 43, 3);
+        opacity: 1;
+    }
+    
+}
+/*.result_lose{
+    display: flex;
+    font-size: 6rem;
+    align-items: center;
+    visibility: hidden;
+    font-family: cursive;
+    animation: result_lose 0.5s infinite alternate ;
+}
+@keyframes result_lose {
+    0%{
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(0.8);
+        color: red;
+        opacity: 1;
+    }
+    
+}
