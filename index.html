@@ -5,49 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>snake_water_gun</title>
+    <title>Snake Water Gun</title>
 </head>
+
 <body>
-    <div class="main">
-       <nav> Let's Play</nav>
-        <div class="container">
-            <div class="choice">
-                <div class="user">
-                    <label for="user_choice"> YOU choose:</label>
-                    <input type="text" name="user" id="user" >
-                </div>
-                <div class="computer">
-                    <label for="cmpter_choice">COMPUTER choose:</label>
-                    <input type="text" name="computer" id="computer">
-                </div>
+    <div id="main">
+        <nav>let's play</nav>
+        <div id="container">
+        <div class="user">
+            <label for="user-choice"> YOUR choice:</label>
+            <input type="text" id="user-choice" readonly>
+        </div>
+        <div class="computer">
+            <label for="computer-choice"> COMPUTER choice:</label>
+            <input type="text" id="computer-choice" readonly>
+        </div>
+        <div id="choices">
+            <div id="snake">
+                <img src="./image/snake.png" height="270">
+                <button onclick="playgame('snake')">snake</button>
             </div>
-            <div class="option">
-                <div id="snake">
-                    <img src="./image/snake.png" alt="image not found" height="250">
-                    <button  value="0" id="s">Snake(0)</button>
-                </div>
-                <div id="water">
-                    <img src="./image/cool.png" alt="image not found" height="250">
-                    <button  value="1" id="w">Water(1)</button>
-                </div>
-                <div id="gun">
-                    <img src="./image/gun.png" alt="image not found" height="250">
-                    <button value="2" id="g" >Gun(2)</button>
-                </div>
+            <div id="water">
+                <img src="./image/cool.png" height="270">
+                <button onclick="playgame('water')">water</button>
             </div>
-        </div>
-        <div class="draw">
-            <p>It's a Draw!!</p>
-        </div>
-        <div class="result_win">
-            <img src="./image/great-job.png" alt="image not found" height="300">
-            <p>You win!!😃</p>
-        </div>
-        <div class="result_lose">
-            <img src="./image/oops.png" height="300">
-            <p>You Lose!!😥</p>
+            <div id="gun">
+                <img src="./image/gun.png" height="270">
+                <button onclick="playgame('gun')">gun</button>
+            </div>
+            
         </div>
     </div>
-    <script src="index.js"></script>
+        <div id="result"></div>
+    </div>
+    <script src="index.js"> </script>
 </body>
 </html>
